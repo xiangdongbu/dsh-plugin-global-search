@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Global Search",
+    "description": "Left-sidebar global search with a Spotlight-style Cmd+Shift+F overlay across sessions, plus a Cmd+F find bar in the open conversation; both jump to matches with an orange highlight."
+  }
+}

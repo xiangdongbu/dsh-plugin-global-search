@@ -1,0 +1,57 @@
+{
+  "name": "dsh-plugin-global-search",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Global search plugin for DeepSeek Harness: a left-sidebar entry plus a Spotlight-style Cmd+Shift+F overlay that searches every session's content, and a Cmd+F find bar for the open conversation, both jumping to matches with an orange highlight.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "global-search",
+    "session-search",
+    "sidebar",
+    "search"
+  ],
+  "icon": "./icon.svg",
+  "publishConfig": {
+    "access": "public"
+  }
+}

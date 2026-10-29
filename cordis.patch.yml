@@ -1,0 +1,14 @@
+# dsh-plugin-global-search
+#
+# Inserts the Host half that keeps a literal, case-insensitive full-text index
+# over every visible Session's user/assistant messages. The sidebar panel and
+# the Cmd/Ctrl+Shift+F overlay live in the browser half (exports["./client"]).
+- insert:
+    - id: global-search
+      name: 'dsh-plugin-global-search'
+      config:
+        # Opt-in log at $DSH_HOME/global-search.log (activation, warm-up, search
+        # traffic). It never changes search results.
+        debug: false
+        snippetChars: 240
+        warmupDelayMs: 2000
