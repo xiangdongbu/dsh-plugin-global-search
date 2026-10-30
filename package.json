@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-global-search",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": false,
   "description": "Global search plugin for DeepSeek Harness: a left-sidebar entry plus a Spotlight-style Cmd+Shift+F overlay that searches every session's content, and a Cmd+F find bar for the open conversation, both jumping to matches with an orange highlight.",
   "type": "module",
